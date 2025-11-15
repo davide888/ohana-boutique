@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <title>Shop – Ohana Boutique</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Shop Ohana Boutique: articoli per la casa, profumi e abbigliamento donna.">
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="ob-header">
+    <div class="ob-container ob-header__inner">
+      <a href="index.html" class="ob-logo">
+        <div class="ob-logo-circle">
+          <span class="ob-logo-letter">O</span>
+        </div>
+        <span>Ohana <strong>Boutique</strong></span>
+      </a>
+      <nav class="ob-nav">
+        <a href="index.html">Home</a>
+        <a href="shop.html" class="is-active">Shop</a>
+        <a href="contact.html">Contatti</a>
+      </nav>
+      <div class="ob-header__actions">
+        <a href="cart.html" class="ob-icon-btn ob-cart-btn" aria-label="Carrello">
+          🛒
+          <span class="ob-cart-count" id="cart-count">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="ob-main">
+    <section class="ob-section">
+      <div class="ob-container">
+        <header class="ob-section__header ob-section__header--shop">
+          <div>
+            <h1>Shop Ohana Boutique</h1>
+            <p>Casa, profumi e abbigliamento donna in un unico spazio.</p>
+          </div>
+          <div class="ob-shop-filters">
+            <select id="filter-category">
+              <option value="all">Tutte le categorie</option>
+              <option value="casa">Casa</option>
+              <option value="profumi">Profumi</option>
+              <option value="abbigliamento">Abbigliamento</option>
+            </select>
+            <select id="filter-sort">
+              <option value="default">Ordina</option>
+              <option value="price-asc">Prezzo crescente</option>
+              <option value="price-desc">Prezzo decrescente</option>
+            </select>
+          </div>
+        </header>
+
+        <div class="ob-shop-layout">
+          <aside class="ob-shop-sidebar">
+            <h3>Categorie</h3>
+            <ul>
+              <li><button class="ob-link-btn" data-category="all">Tutti i prodotti</button></li>
+              <li><button class="ob-link-btn" data-category="casa">Casa</button></li>
+              <li><button class="ob-link-btn" data-category="profumi">Profumi</button></li>
+              <li><button class="ob-link-btn" data-category="abbigliamento">Abbigliamento</button></li>
+            </ul>
+            <div class="ob-shop-highlight">
+              <h4>Promo del mese</h4>
+              <p>Cofanetti profumo &amp; cardigan in sconto.</p>
+            </div>
+          </aside>
+
+          <div class="ob-grid ob-grid--3" id="product-list">
+            <article class="ob-card" data-product data-category="profumi" data-price="49.90">
+              <div class="ob-card__badge"><span class="ob-badge-crown">👑</span> New</div>
+              <div class="ob-card__image ob-card__image--profumo"></div>
+              <h3>Profumo Donna "Rose Gold"</h3>
+              <p class="ob-card__meta">50 ml · Note floreali e vaniglia.</p>
+              <div class="ob-card__footer">
+                <span class="ob-price">€49,90</span>
+                <button class="ob-btn ob-btn--small ob-btn--primary add-to-cart"
+                  data-name='Profumo Donna "Rose Gold"' data-price="49.90">
+                  Aggiungi al carrello
+                </button>
+              </div>
+            </article>
+
+            <article class="ob-card" data-product data-category="casa" data-price="24.90">
+              <div class="ob-card__image ob-card__image--diffusore"></div>
+              <h3>Diffusore "Vanilla Home"</h3>
+              <p class="ob-card__meta">Bastoncini in rattan · 250 ml.</p>
+              <div class="ob-card__footer">
+                <span class="ob-price">€24,90</span>
+                <button class="ob-btn ob-btn--small ob-btn--primary add-to-cart"
+                  data-name='Diffusore "Vanilla Home"' data-price="24.90">
+                  Aggiungi al carrello
+                </button>
+              </div>
+            </article>
+
+            <article class="ob-card" data-product data-category="casa" data-price="59.90">
+              <div class="ob-card__badge ob-card__badge--sale ob-card__badge--with-crown">-20%</div>
+              <div class="ob-card__image ob-card__image--tessili"></div>
+              <h3>Set Asciugamani "Soft Home"</h3>
+              <p class="ob-card__meta">3 pezzi · Spugna rosa cipria.</p>
+              <div class="ob-card__footer">
+                <span class="ob-price ob-price--old">€74,90</span>
+                <span class="ob-price">€59,90</span>
+              </div>
+              <button class="ob-btn ob-btn--small ob-btn--primary add-to-cart"
+                data-name='Set Asciugamani "Soft Home"' data-price="59.90">
+                Aggiungi al carrello
+              </button>
+            </article>
+
+            <article class="ob-card" data-product data-category="abbigliamento" data-price="69.90">
+              <div class="ob-card__image ob-card__image--dress"></div>
+              <h3>Abito lungo "Ohana Pink"</h3>
+              <p class="ob-card__meta">Taglie S–L · Tessuto fluido.</p>
+              <div class="ob-card__footer">
+                <span class="ob-price">€69,90</span>
+                <button class="ob-btn ob-btn--small ob-btn--primary add-to-cart"
+                  data-name='Abito lungo "Ohana Pink"' data-price="69.90">
+                  Aggiungi al carrello
+                </button>
+              </div>
+            </article>
+
+            <article class="ob-card" data-product data-category="abbigliamento" data-price="39.90">
+              <div class="ob-card__image ob-card__image--maglia"></div>
+              <h3>Maglia "Soft Blush"</h3>
+              <p class="ob-card__meta">Taglie S–XL · Cotone morbido.</p>
+              <div class="ob-card__footer">
+                <span class="ob-price">€39,90</span>
+                <button class="ob-btn ob-btn--small ob-btn--primary add-to-cart"
+                  data-name='Maglia "Soft Blush"' data-price="39.90">
+                  Aggiungi al carrello
+                </button>
+              </div>
+            </article>
+
+            <article class="ob-card" data-product data-category="abbigliamento" data-price="49.90">
+              <div class="ob-card__badge ob-card__badge--sale ob-card__badge--with-crown">-10%</div>
+              <div class="ob-card__image ob-card__image--cardigan"></div>
+              <h3>Cardigan "Gold Buttons"</h3>
+              <p class="ob-card__meta">Dettagli oro · Taglie S–L.</p>
+              <div class="ob-card__footer">
+                <span class="ob-price ob-price--old">€55,90</span>
+                <span class="ob-price">€49,90</span>
+              </div>
+              <button class="ob-btn ob-btn--small ob-btn--primary add-to-cart"
+                data-name='Cardigan "Gold Buttons"' data-price="49.90">
+                Aggiungi al carrello
+              </button>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="ob-footer">
+    <div class="ob-container ob-footer__inner">
+      <div>
+        <div class="ob-logo ob-logo--footer">
+          <div class="ob-logo-circle ob-logo-circle--small">
+            <span class="ob-logo-letter">O</span>
+          </div>
+          <span>Ohana <strong>Boutique</strong></span>
+        </div>
+        <p class="ob-footer__text">
+          Boutique online dedicata a casa, profumi e abbigliamento donna.
+        </p>
+      </div>
+      <div class="ob-footer__cols">
+        <div>
+          <h4>Shop</h4>
+          <a href="shop.html">Tutti i prodotti</a>
+          <a href="#casa">Casa</a>
+          <a href="#profumi">Profumi</a>
+          <a href="#abbigliamento">Abbigliamento</a>
+        </div>
+        <div>
+          <h4>Info</h4>
+          <a href="contact.html">Contatti</a>
+          <a href="#">Spedizioni &amp; resi</a>
+          <a href="#">Privacy</a>
+        </div>
+      </div>
+    </div>
+    <div class="ob-footer__bottom">
+      <div class="ob-container">
+        <small>© <span id="year"></span> Ohana Boutique. Demo e-commerce front-end.</small>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
